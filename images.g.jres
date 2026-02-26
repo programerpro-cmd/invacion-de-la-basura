@@ -1,0 +1,19 @@
+{
+    "image1": {
+        "data": "hwQMABAAAAAA8P//AAAAAADv7v8PAAAA8O7u7v///wDv7kREvR5hD+/uTkS9FGEP7+7u9N0UYf/v7u703eT+/+/u70RE3u3/8P7/7/3e7Q/w//9P9E/+AAD/////AAAAAPD//wAAAAA=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "hola"
+    },
+    "anim1": {
+        "namespace": "myAnimations",
+        "id": "anim1",
+        "mimeType": "application/mkcd-animation",
+        "data": "ZjQwMTBjMDAxMDAwMDIwMDAwZjBmZmZmMDAwMDAwZWZlZWVlZmYwMGYwZWVlZWVlZmUwZmVmZWVlZWVlZmZmZmVmNGVlZWZlZmZmZmVmNGVlNGVlZmZmZmZmNGU0NDQ0ZmZmZmZmNGVmNDRmNGVmZmYwZGZkZDRkNGQwZjAwYmZkYjRkZmYwZjAwZWY0ZTQ0ZjQwMDAwZGVlZDExZjEwMDAwZGVlZDExZjEwMDAwZWY2ZTY2ZjYwMDAwZjBmZmZmMGYwMDAwMDBmMGZmMDAwMDAwZjBmZmZmMDAwMDAwZWZlZWVlZmYwMGYwZWVlZWVlZmUwZmVmZWVlZWVlZmZmZmVmNGVlZWZlZmZmZmVmNGVlNGVlZmZmZmZmNGU0NDQ0ZmZmZmZmNGVmNDRmNGVmZmYwZGZkZDRkNGQwZjAwYmZkYjRkZmYwZjAwNGY0NGVlZjQwMDAwMWZlMTExZmUwMDAwMWZlMTExZmUwMDAwNmY2NmVlZjYwMDAwZjBmZmZmMGYwMDAwMDBmMGZmMDAwMA==",
+        "displayName": "waza"
+    },
+    "*": {
+        "mimeType": "image/x-mkcd-f4",
+        "dataEncoding": "base64",
+        "namespace": "myImages"
+    }
+}
