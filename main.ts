@@ -106,9 +106,6 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . . . . . . . . . . . 
         `, mySprite, -100, 0)
 })
-controller.right.onEvent(ControllerButtonEvent.Repeated, function () {
-    game.reset()
-})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.enemy2, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
     music.play(music.createSong(hex`0078000408020104001c00100500640000041e000004000000000000000000000000000a040004060008000c00012a`), music.PlaybackMode.UntilDone)
@@ -199,6 +196,9 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.enemy2, function (sprite, ot
     sprites.destroy(projectile)
     enemyalive = 0
     music.play(music.stringPlayable("G A B C5 B A B - ", 300), music.PlaybackMode.UntilDone)
+})
+controller.menu.onEvent(ControllerButtonEvent.Pressed, function () {
+    game.reset()
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     info.changeLifeBy(1)
@@ -405,26 +405,28 @@ game.onUpdateInterval(1000, function () {
             timePassed = 0
         }
     }
-    if (timePassed == 15) {
-        flag_2 = sprites.create(img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . d 2 2 . . . . . . 
-            . . . . . . . d 2 2 2 . . . . . 
-            . . . . . . . d 2 2 2 2 . . . . 
-            . . . . . . . d . . . . . . . . 
-            . . . . . . . d . . . . . . . . 
-            . . . . . . . d . . . . . . . . 
-            . . . . f f f d f f f . . . . . 
-            . . . f f f f d f f f f . . . . 
-            . . . f f f f f f f f f . . . . 
-            . . . . f f f f f f f . . . . . 
-            `, SpriteKind.flag2)
-        flag_2.setPosition(124, randint(0, 120))
+    if (level == 2) {
+        if (timePassed == 600) {
+            flag_2 = sprites.create(img`
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . . . . . . . . . . 
+                . . . . . . . d 2 2 . . . . . . 
+                . . . . . . . d 2 2 2 . . . . . 
+                . . . . . . . d 2 2 2 2 . . . . 
+                . . . . . . . d . . . . . . . . 
+                . . . . . . . d . . . . . . . . 
+                . . . . . . . d . . . . . . . . 
+                . . . . f f f d f f f . . . . . 
+                . . . f f f f d f f f f . . . . 
+                . . . f f f f f f f f f . . . . 
+                . . . . f f f f f f f . . . . . 
+                `, SpriteKind.flag2)
+            flag_2.setPosition(124, randint(0, 120))
+        }
     }
 })
 game.onUpdateInterval(1000, function () {
