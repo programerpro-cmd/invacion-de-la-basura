@@ -223,7 +223,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.flag, function (sprite, otherSpr
     game.splash("WIN")
     game.splash("NEXT LEVEL")
     level = 2
-    sprites.destroy(flag)
+    sprites.destroy(flag3)
     timePassed = 0
 })
 sprites.onOverlap(SpriteKind.enemy3, SpriteKind.inocent3, function (sprite, otherSprite) {
@@ -240,7 +240,7 @@ let flag4: Sprite = null
 let mySprite3: Sprite = null
 let flag_2: Sprite = null
 let enemy_2: Sprite = null
-let flag: Sprite = null
+let flag3: Sprite = null
 let mySprite2: Sprite = null
 let enemyalive = 0
 let projectile: Sprite = null
@@ -383,7 +383,7 @@ game.onUpdateInterval(1000, function () {
     timePassed += 1
     if (level == 1) {
         if (timePassed == 300) {
-            flag = sprites.create(img`
+            flag3 = sprites.create(img`
                 . . . . . . . . . . . . . . . . 
                 . . . . . . . . . . . . . . . . 
                 . . . . . . . . . . . . . . . . 
@@ -401,7 +401,7 @@ game.onUpdateInterval(1000, function () {
                 . . . f f f f f f f f f . . . . 
                 . . . . f f f f f f f . . . . . 
                 `, SpriteKind.flag)
-            flag.setPosition(124, randint(0, 120))
+            flag3.setPosition(124, randint(0, 120))
             timePassed = 0
         }
     }
